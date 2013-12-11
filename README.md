@@ -1,6 +1,6 @@
-# generator-wpplugin [![Build Status](https://secure.travis-ci.org/thiagolcks/generator-wpplugin.png?branch=master)](https://travis-ci.org/thiagolcks/generator-wpplugin)
+# generator-wp-plugin-boilerplate
 
-A generator for [Yeoman](http://yeoman.io).
+A generator for [Yeoman](http://yeoman.io) to customize the WP Plugin Boilerplate
 
 
 ## Getting Started
@@ -19,20 +19,19 @@ Not every new computer comes with a Yeoman pre-installed. He lives in the [npm](
 $ npm install -g yo
 ```
 
-### Yeoman Generators
-
-Yeoman travels light. He didn't pack any generators when he moved in. You can think of a generator like a plug-in. You get to choose what type of application you wish to create, such as a Backbone application or even a Chrome extension.
-
-To install generator-wpplugin from npm, run:
+### Install the generator
 
 ```
-$ npm install -g generator-wpplugin
+$ npm install -g generator-wp-plugin-boilerplate
 ```
 
-Finally, initiate the generator:
+### How to use it
 
 ```
-$ yo wpplugin
+# Go to the plugin directory of your WP
+cd wp-content/plugins
+# Run the generator
+$ yo wp-plugin-boilerplate
 ```
 
 ### Getting To Know Yeoman

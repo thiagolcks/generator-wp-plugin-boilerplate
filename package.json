@@ -12,14 +12,6 @@
     "email": "thiago@zira.com.br",
     "url": "https://github.com/thiagolcks"
   },
-  "options": {
-    "author": {
-      "name": "Thiago Locks",
-      "email": "thiago@zira.com.br",
-      "url": "https://github.com/thiagolcks",
-      "copyright": "Zira"
-    }
-  },
   "main": "app/index.js",
   "repository": {
     "type": "git",

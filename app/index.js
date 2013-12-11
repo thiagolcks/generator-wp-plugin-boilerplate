@@ -12,7 +12,8 @@ var ncp      = require('ncp');
 var Replacer = require('./replacer');
 
 var WpPluginBoilerplateGenerator = module.exports = function WpPluginBoilerplateGenerator(args, options, config) {
-  var self = this;
+  var self = this,
+    default_file;
 
   yeoman.generators.Base.apply(this, arguments);
 
@@ -27,7 +28,19 @@ var WpPluginBoilerplateGenerator = module.exports = function WpPluginBoilerplate
     console.log('All done!');
   });
 
-  this.pkg = JSON.parse(this.readFileAsString(path.join(__dirname, '../package.json')));
+  // have Yeoman greet the user.
+  console.log(this.yeoman);
+
+  if ( fs.existsSync(__dirname + '/../default-values.json') ) {
+    default_file = '../default-values.json';
+  } else {
+    console.log('--------------------------');
+    console.log('May I give you an advice?');
+    console.log('You should create the file ' + __dirname.slice(0, -3) + 'default-values.json with default values! Use the default-values-example.json as a template.');
+    console.log('--------------------------');
+    default_file = '../default-values-example.json';
+  }
+  this.defaultValues = JSON.parse(this.readFileAsString(path.join(__dirname, default_file)));
 };
 
 util.inherits(WpPluginBoilerplateGenerator, yeoman.generators.Base);
@@ -35,9 +48,6 @@ util.inherits(WpPluginBoilerplateGenerator, yeoman.generators.Base);
 WpPluginBoilerplateGenerator.prototype.askFor = function askFor() {
   var cb = this.async(),
     prompts = [];
-
-  // have Yeoman greet the user.
-  console.log(this.yeoman);
 
   prompts = [{
     name: 'name',
@@ -50,19 +60,19 @@ WpPluginBoilerplateGenerator.prototype.askFor = function askFor() {
   }, {
     name: 'author',
     message: 'What is your name?',
-    default: this.pkg.options.author.name
+    default: this.defaultValues.author.name
   }, {
     name: 'authorEmail',
     message: 'What is your e-mail?',
-    default: this.pkg.options.author.email
+    default: this.defaultValues.author.email
   }, {
     name: 'authorURI',
     message: 'What is your URL?',
-    default: this.pkg.options.author.url
+    default: this.defaultValues.author.url
   }, {
     name: 'copyright',
     message: 'What goes in copyright tags?',
-    default: this.pkg.options.author.copyright
+    default: this.defaultValues.author.copyright
   }, {
     type: 'checkbox',
     name: 'publicResources',
