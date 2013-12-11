@@ -1,0 +1,54 @@
+{
+  "name": "generator-wpplugin",
+  "version": "0.0.0",
+  "description": "A generator for Yeoman",
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "homepage": "https://github.com/thiagolcks/generator-wpplugin",
+  "bugs": "https://github.com/thiagolcks/generator-wpplugin/issues",
+  "author": {
+    "name": "Thiago Locks",
+    "email": "thiago@zira.com.br",
+    "url": "https://github.com/thiagolcks"
+  },
+  "options": {
+    "author": {
+      "name": "Thiago Locks",
+      "email": "thiago@zira.com.br",
+      "url": "https://github.com/thiagolcks",
+      "copyright": "Zira"
+    }
+  },
+  "main": "app/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/thiagolcks/generator-wpplugin.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "yeoman-generator": "~0.14.0",
+    "request": "~2.29.0",
+    "adm-zip": "~0.4.3",
+    "rimraf": "~2.1",
+    "underscore.string": "~2.3",
+    "ncp": "~0.4.2"
+  },
+  "devDependencies": {
+    "mocha": "~1.14.0"
+  },
+  "peerDependencies": {
+    "yo": ">=1.0.0"
+  },
+  "engines": {
+    "node": ">=0.8.0",
+    "npm": ">=1.2.10"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ]
+}
