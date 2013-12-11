@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "A generator for Yeoman to customize the WP Plugin Boilerplate (https://github.com/tommcfarlin/WordPress-Plugin-Boilerplate).",
   "keywords": [
-    "yeoman-generator"
+    "yeoman", "yeoman-generator", "wordpress", "wordpress-plugin", "PHP"
   ],
   "homepage": "https://github.com/thiagolcks/generator-wp-plugin-boilerplate",
   "bugs": "https://github.com/thiagolcks/generator-wp-plugin-boilerplate/issues",
