@@ -21,7 +21,7 @@ var Replacer = module.exports = function Replacer(file, options) {
   module.add(/Plugin_Name_Admin/g, options.pluginClassName + 'Admin');
   module.add(/Plugin_Name/g, options.pluginClassName);
   module.add(/Plugin Name\./g, options.pluginName);
-  module.add(/Your Name <email@example\.com>/g, options.author + " <" + options.authorEmail + ">");
+  module.add(/Your Name <email@example\.com>/g, options.author + ' <' + options.authorEmail + '>');
   module.add(/1\.0\.0/g, options.pluginVersion);
   module.add(/Your Name or Company Name/g, options.pluginCopyright);
 
