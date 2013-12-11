@@ -107,33 +107,33 @@ WppluginGenerator.prototype.askFor = function askFor() {
   }.bind(this));
 };
 
-// WppluginGenerator.prototype.download = function download() {
-//   var cb = this.async(),
-//     self = this;
+WppluginGenerator.prototype.download = function download() {
+  var cb = this.async(),
+    self = this;
 
-//   console.log("Downloading the WP Plugin Boilerplate...");
+  console.log("Downloading the WP Plugin Boilerplate...");
 
-//   request('http://github.com/tommcfarlin/WordPress-Plugin-Boilerplate/archive/master.zip')
-//   .pipe(fs.createWriteStream('plugin.zip'))
-//   .on('close', function () {
-//     var zip = new admzip("./plugin.zip");
-//     console.log('File downloaded');
-//     zip.extractAllTo("plugin_temp", true);
-//     fs.rename('./plugin_temp/WordPress-Plugin-Boilerplate-master/plugin-name/', './' + self.pluginSlug, function () {
-//       rmdir('plugin_temp', function (error){
-//         cb();
-//       });
-//     });
-//     fs.unlink('plugin.zip');
-//   });
-// };
-
-WppluginGenerator.prototype.copyPlugin = function copyPlugin() {
-  var cb = this.async();
-  ncp('./base', './' + this.pluginSlug, function () {
-    cb();
+  request('http://github.com/tommcfarlin/WordPress-Plugin-Boilerplate/archive/master.zip')
+  .pipe(fs.createWriteStream('plugin.zip'))
+  .on('close', function () {
+    var zip = new admzip("./plugin.zip");
+    console.log('File downloaded');
+    zip.extractAllTo("plugin_temp", true);
+    fs.rename('./plugin_temp/WordPress-Plugin-Boilerplate-master/plugin-name/', './' + self.pluginSlug, function () {
+      rmdir('plugin_temp', function (error){
+        cb();
+      });
+    });
+    fs.unlink('plugin.zip');
   });
 };
+
+// WppluginGenerator.prototype.copyPlugin = function copyPlugin() {
+//   var cb = this.async();
+//   ncp('./base', './' + this.pluginSlug, function () {
+//     cb();
+//   });
+// };
 
 WppluginGenerator.prototype.setFiles = function setName() {
   // Rename files
