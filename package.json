@@ -1,12 +1,12 @@
 {
-  "name": "generator-wpplugin",
-  "version": "0.0.0",
-  "description": "A generator for Yeoman",
+  "name": "generator-wp-plugin-boilerplate",
+  "version": "0.1.0",
+  "description": "A generator for Yeoman to customize the WP Plugin Boilerplate (https://github.com/tommcfarlin/WordPress-Plugin-Boilerplate).",
   "keywords": [
     "yeoman-generator"
   ],
-  "homepage": "https://github.com/thiagolcks/generator-wpplugin",
-  "bugs": "https://github.com/thiagolcks/generator-wpplugin/issues",
+  "homepage": "https://github.com/thiagolcks/generator-wp-plugin-boilerplate",
+  "bugs": "https://github.com/thiagolcks/generator-wp-plugin-boilerplate/issues",
   "author": {
     "name": "Thiago Locks",
     "email": "thiago@zira.com.br",
@@ -23,7 +23,7 @@
   "main": "app/index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/thiagolcks/generator-wpplugin.git"
+    "url": "git://github.com/thiagolcks/generator-wp-plugin-boilerplate.git"
   },
   "scripts": {
     "test": "mocha"

@@ -45,7 +45,7 @@ WpPluginBoilerplateGenerator.prototype.askFor = function askFor() {
     default: 'My New Plugin'
   }, {
     name: 'pluginVersion',
-    message: 'What is the version of your new plugin?',
+    message: 'What is your new plugin\'s version?',
     default: '1.0.0'
   }, {
     name: 'author',
@@ -76,7 +76,7 @@ WpPluginBoilerplateGenerator.prototype.askFor = function askFor() {
   }, {
     type: 'confirm',
     name: 'adminPage',
-    message: 'Does your plugin need a admin page?'
+    message: 'Does your plugin need an admin page?'
   }];
 
   this.prompt(prompts, function (props) {
