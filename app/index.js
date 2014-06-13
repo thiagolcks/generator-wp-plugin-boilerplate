@@ -76,7 +76,7 @@ WpPluginBoilerplateGenerator.prototype.askFor = function askFor() {
   }, {
     type: 'checkbox',
     name: 'publicResources',
-    message: 'Which resources your plublic site needs?',
+    message: 'Which resources your public site needs?',
     choices: [{name: 'JS', checked: true}, {name: 'CSS', checked: true}]
   }, {
     type: 'checkbox',
