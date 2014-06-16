@@ -18,7 +18,7 @@ var Replacer = module.exports = function Replacer(file, options) {
 
   // Base replacements
   module.add(/plugin-name/g, options.pluginSlug);
-  module.add(/Plugin_Name_Admin/g, options.pluginClassName + 'Admin');
+  module.add(/Plugin_Name_Admin/g, options.pluginClassName + '_Admin');
   module.add(/Plugin_Name/g, options.pluginClassName);
   module.add(/Plugin Name\./g, options.pluginName);
   module.add(/Your Name <email@example\.com>/g, options.author + ' <' + options.authorEmail + '>');
